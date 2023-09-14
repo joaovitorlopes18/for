@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Switch Case</title>
+</head>
+<body>
+    <h1>opções:</h1>
+
+    <label for="selecioneOpcao">Selecione uma opção:</label>
+    <select id="selecioneOpcao">
+        <option value="opcao1">Opção 1</option>
+        <option value="opcao2">Opção 2</option>
+        <option value="opcao3">Opção 3</option>
+    </select>
+
+    <p id="resultado"></p>
+
+    <script>
+        // Função que executa o switch case com base na opção selecionada no <select>
+        document.getElementById("selecioneOpcao").addEventListener("change", function() {
+            var opcaoSelecionada = this.value;
+            var resultado = document.getElementById("resultado");
+
+            switch (opcaoSelecionada) {
+                case "opcao1":
+                    resultado.textContent = "Você selecionou a Opção 1.";
+                    break;
+                case "opcao2":
+                    resultado.textContent = "Você selecionou a Opção 2.";
+                    break;
+                case "opcao3":
+                    resultado.textContent = "Você selecionou a Opção 3.";
+                    break;
+                default:
+                    resultado.textContent = "Opção inválida.";
+            }
+        });
+    </script>
+</body>
+</html>
