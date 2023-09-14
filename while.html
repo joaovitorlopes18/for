@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem Decrescente:</title>
+</head>
+<body>
+    <h1>Contagem Decrescente:</h1>
+    <ul id="numeros-lista"></ul>
+
+    <script>
+        // Usando um loop while para contar de 10 até 1 em ordem decrescente
+        var numerosLista = document.getElementById("numeros-lista");
+        var numero = 10;
+
+        while (numero >= 1) {
+            var itemLista = document.createElement("li");
+            itemLista.textContent = numero;
+            numerosLista.appendChild(itemLista);
+            numero--;
+        }
+    </script>
+</body>
+</html>
