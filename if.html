@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de IF em HTML</title>
+</head>
+<body>
+    <h1>Exemplo de IF em HTML</h1>
+
+    <p>Informe sua idade:</p>
+    <input type="number" id="idade">
+    <button onclick="verificarIdade()">Verificar</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function verificarIdade() {
+            var idade = document.getElementById("idade").value;
+
+            if (idade >= 18) {
+                document.getElementById("resultado").textContent = "Você é maior de idade.";
+            } else {
+                document.getElementById("resultado").textContent = "Você é menor de idade.";
+            }
+        }
+    </script>
+</body>
+</html>
